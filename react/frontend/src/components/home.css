@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: 'Poppins', sans-serif;
+
+  overflow-x: hidden;
+}
+
+.home {
+
+  height: 100vh;
+
+  background-image:
+  linear-gradient(
+    rgba(0, 0, 0, 0.55),
+    rgba(0,0,0,0.85)
+  ),
+  url('https://blog.lostandfound.io/assets/images/the-psychology-behind-losing-personal-items.webp');
+
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/* NAVBAR */
+
+.navbar {
+
+  width: 100%;
+
+  padding: 25px 70px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  color: white;
+}
+
+.logo {
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.nav-links {
+
+  display: flex;
+
+  list-style: none;
+
+  gap: 40px;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.nav-links li {
+
+  transition: 0.3s;
+}
+
+.nav-links li:hover {
+
+  color: #dcdcdc;
+}
+
+.nav-btn {
+
+  padding: 12px 28px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: white;
+
+  color: black;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+
+  transform: scale(1.05);
+}
+
+
+
+/* HERO SECTION */
+
+.hero {
+
+  height: 85vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: white;
+}
+
+.overlay h1 {
+
+  font-size: 80px;
+
+  width: 900px;
+
+  line-height: 1.2;
+
+  margin-bottom: 25px;
+}
+
+.overlay p {
+
+  font-size: 22px;
+
+  margin-bottom: 40px;
+
+  color: #e0e0e0;
+}
+
+.hero-buttons {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+
+  padding: 16px 38px;
+
+  border-radius: 40px;
+
+  border: none;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.primary-btn {
+
+  background: white;
+
+  color: black;
+
+  font-weight: 600;
+}
+
+.secondary-btn {
+
+  background: transparent;
+
+  border: 2px solid white;
+
+  color: white;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+
+  transform: translateY(-3px);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+/* ABOUT SECTION */
+
+.about-section{
+
+  padding: 100px 10%;
+
+  background: #f5f5f5;
+
+  text-align: center;
+}
+
+.about-section h2{
+
+  font-size: 50px;
+
+  margin-bottom: 25px;
+
+  color: #111;
+}
+
+.about-section p{
+
+  font-size: 20px;
+
+  color: #555;
+
+  max-width: 850px;
+
+  margin: auto;
+
+  line-height: 1.8;
+}
+
+
+/* ABOUT CARDS */
+
+.about-container{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  margin-top: 60px;
+
+  flex-wrap: wrap;
+}
+
+.about-card{
+
+  background: white;
+
+  width: 280px;
+
+  padding: 35px 25px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+}
+
+.about-card:hover{
+
+  transform: translateY(-8px);
+}
+
+.about-card h3{
+
+  font-size: 28px;
+
+  margin-bottom: 15px;
+
+  color: #111;
+}
+
+.about-card p{
+
+  font-size: 17px;
+
+  color: #666;
+
+  line-height: 1.6;
+}
+
+
+/* LINKS */
+
+.nav-links a{
+
+  text-decoration: none;
+
+  color: white;
+}
+
+.nav-links a:hover{
+
+  color: #dcdcdc;
+}
+
+.search-box {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.search-box input {
+
+  padding: 10px 18px;
+
+  border: none;
+
+  outline: none;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(10px);
+
+  color: white;
+
+  width: 220px;
+}
+
+.search-box input::placeholder {
+
+  color: #e5e5e5;
+}
+
+.search-btn {
+
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: white;
+
+  color: black;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+
+  transform: scale(1.05);
+}

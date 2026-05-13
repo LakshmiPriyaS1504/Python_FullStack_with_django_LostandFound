@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.auth-page {
+
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background-image:
+  linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)
+  ),
+  url('https://blog.lostandfound.io/assets/images/the-psychology-behind-losing-personal-items.webp');
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.auth-box {
+
+  width: 420px;
+
+  padding: 50px;
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(15px);
+
+  background: rgba(255,255,255,0.12);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+  color: white;
+
+  box-shadow:
+  0 8px 32px rgba(0,0,0,0.3);
+}
+
+.auth-box h1 {
+
+  text-align: center;
+
+  font-size: 42px;
+}
+
+.auth-box p {
+
+  text-align: center;
+
+  color: #ececec;
+
+  margin-bottom: 10px;
+}
+
+.auth-box input {
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  border: none;
+
+  outline: none;
+
+  font-size: 16px;
+
+  background: rgba(255,255,255,0.15);
+
+  color: white;
+}
+
+.auth-box input::placeholder {
+
+  color: #e6e6e6;
+}
+
+.auth-box button {
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  background: white;
+
+  color: black;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.auth-box button:hover {
+
+  transform: translateY(-3px);
+}
+
+.auth-box span {
+
+  text-align: center;
+
+  color: #f0f0f0;
+}
+
+.register-btn {
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  border: 1px solid white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+
+  background: white;
+
+  color: black;
+}
