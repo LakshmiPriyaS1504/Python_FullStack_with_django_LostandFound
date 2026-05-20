@@ -22,3 +22,5 @@ wcwidth==0.7.0
 gunicorn
 djangorestframework
 django-cors-headers
+mysqlclient
+celery==5.6.3
