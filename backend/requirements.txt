@@ -21,3 +21,4 @@ vine==5.1.0
 wcwidth==0.7.0
 gunicorn
 djangorestframework
+corsheaders
