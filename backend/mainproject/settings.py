@@ -152,5 +152,4 @@ EMAIL_HOST_USER = 'lakxmipriyaa@gmail.com'
 EMAIL_HOST_PASSWORD = 'hafgglvdaagkhbdf'
 
 CORS_ALLOW_ALL_ORIGINS = True
-
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ["*"]
