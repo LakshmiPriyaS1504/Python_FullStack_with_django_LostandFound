@@ -8,7 +8,6 @@ import {
 
 import axios from 'axios'
 
-
 function Home() {
 
   const navigate = useNavigate()
@@ -41,12 +40,16 @@ function Home() {
 
       .catch((error) => {
 
-        console.log(error.response?.data || error.message)
+        console.log(
+          error.response?.data ||
+          error.message
+        )
 
       })
+
     }
 
-  }, [])
+  }, [token])
 
 
   const checkLogin = (path) => {
@@ -55,12 +58,16 @@ function Home() {
 
       navigate(path)
 
-    } else {
+    }
+
+    else {
 
       alert('Please login first')
 
       navigate('/login')
+
     }
+
   }
 
 
@@ -71,6 +78,7 @@ function Home() {
     alert('Logged out successfully')
 
     navigate('/login')
+
   }
 
 
@@ -78,120 +86,226 @@ function Home() {
 
     <div className="home">
 
-      {/* Navbar */}
+      {/* NAVBAR */}
+
       <nav className="navbar">
 
         <h2 className="logo">
           Lost&Found
         </h2>
 
-        <ul className="nav-links">
 
-          <li onClick={() => navigate('/')}>
-            Home
-          </li>
-
-          <li>
-            <a href='#about'>
-              About
-            </a>
-          </li>
-
-        </ul>
-
-        <div className="search-box">
-
-          <input
-            type="text"
-            placeholder="Search items..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-
-          <button
-            className="search-btn"
-            onClick={() => navigate(`/search?query=${search}`)}
-          >
-            Search
-          </button>
-
-        </div>
+        <div className="nav-right">
 
 
-        {
-          profile && (
+          <ul className="nav-links">
 
-            <div className="profile-container">
+            <li
+              onClick={() => navigate('/')}
+            >
+              Home
+            </li>
 
-              <button className="profile-btn">
-                {profile.username}
-              </button>
+            <li>
 
-              <div className="profile-dropdown">
+              <a href="#about">
 
-                <p>Username: {profile.username}</p>
-                <p>Phone: {profile.phone}</p>
+                About
+
+              </a>
+
+            </li>
+
+          </ul>
+
+
+          <div className="search-box">
+
+            <input
+              type="text"
+
+              placeholder="Search items..."
+
+              value={search}
+
+              onChange={(e) =>
+                setSearch(
+                  e.target.value
+                )
+              }
+            />
+
+            <button
+
+              className="search-btn"
+
+              onClick={() =>
+                navigate(
+                  `/search?query=${search}`
+                )
+              }
+
+            >
+
+              Search
+
+            </button>
+
+          </div>
+
+
+
+          {
+            profile && (
+
+              <div
+                className="profile-container"
+              >
+
+                <button
+                  className="profile-btn"
+                >
+
+                  {profile.username}
+
+                </button>
+
+
+                <div
+                  className="profile-dropdown"
+                >
+
+                  <p>
+
+                    Username:
+                    {profile.username}
+
+                  </p>
+
+                  <p>
+
+                    Phone:
+                    {profile.phone}
+
+                  </p>
+
+                </div>
 
               </div>
 
-            </div>
-          )
-        }
+            )
+          }
 
 
-        {
-          token ? (
 
-            <button
-              className="nav-btn"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
+          {
 
-          ) : (
+            token ?
 
-            <button
-              className="nav-btn"
-              onClick={() => navigate('/login')}
-            >
-              Login
-            </button>
+            (
 
-          )
-        }
+              <button
+
+                className="nav-btn"
+
+                onClick={
+                  handleLogout
+                }
+
+              >
+
+                Logout
+
+              </button>
+
+            )
+
+            :
+
+            (
+
+              <button
+
+                className="nav-btn"
+
+                onClick={() =>
+                  navigate('/login')
+                }
+
+              >
+
+                Login
+
+              </button>
+
+            )
+
+          }
+
+        </div>
 
       </nav>
 
 
-      {/* Home Section */}
-      <section id='home' className='hero'>
+
+      {/* HERO */}
+
+      <section
+        id="home"
+        className="hero"
+      >
 
         <div className="overlay">
 
-          
           <h1>
+
             Find Your Lost Items Easily
+
           </h1>
 
+
           <p>
+
             Report • Search • Recover
+
           </p>
 
-          <div className="hero-buttons">
+
+          <div
+            className="hero-buttons"
+          >
 
             <button
+
               className="primary-btn"
-              onClick={() => checkLogin('/report')}
+
+              onClick={() =>
+                checkLogin(
+                  '/report'
+                )
+              }
+
             >
+
               Report Item
+
             </button>
 
+
             <button
+
               className="secondary-btn"
-              onClick={() => checkLogin('/items')}
+
+              onClick={() =>
+                checkLogin(
+                  '/items'
+                )
+              }
+
             >
+
               View Items
+
             </button>
 
           </div>
@@ -201,49 +315,117 @@ function Home() {
       </section>
 
 
-     <section id='about' className='about-section'>
 
-  <div className="about-container">
+      {/* ABOUT */}
 
-    <h2>About Us</h2>
+      <section
+        id="about"
+        className="about-section"
+      >
 
-    <p className="about-intro">
-      Lost&Found is a platform designed to make recovering lost belongings simple,
-      fast, and secure. We connect people who lose items with those who find them.
-    </p>
+        <div
+          className="about-container"
+        >
 
-    <div className="about-grid">
+          <h2>
 
-      <div className="about-card">
-        <h3>🔍 Easy Search</h3>
-        <p>Quickly search through reported lost and found items.</p>
-      </div>
+            About Us
 
-      <div className="about-card">
-        <h3>🔐 Secure System</h3>
-        <p>Your data is safe and only visible to authenticated users.</p>
-      </div>
+          </h2>
 
-    </div>
 
-  </div>
+          <p
+            className="about-intro"
+          >
 
-</section>
+            Lost&Found is a platform
+            designed to make recovering
+            lost belongings simple,
+            fast and secure.
 
+          </p>
+
+
+          <div
+            className="about-grid"
+          >
+
+            <div
+              className="about-card"
+            >
+
+              <h3>
+
+                🔍 Easy Search
+
+              </h3>
+
+              <p>
+
+                Quickly search
+                through reported
+                items.
+
+              </p>
+
+            </div>
+
+
+            <div
+              className="about-card"
+            >
+
+              <h3>
+
+                🔐 Secure System
+
+              </h3>
+
+              <p>
+
+                Only authenticated
+                users can access.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      {/* FOOTER */}
 
       <footer className="footer">
 
+        <p
+          className="copyright"
+        >
 
-          <p className="copyright">
-            © {new Date().getFullYear()} Lost&Found. All rights reserved.
-          </p>
+          ©
+          {' '}
+          {
+            new Date()
+            .getFullYear()
+          }
 
-        
+          {' '}
+
+          Lost&Found.
+          All rights reserved.
+
+        </p>
 
       </footer>
 
     </div>
+
   )
+
 }
 
 export default Home
