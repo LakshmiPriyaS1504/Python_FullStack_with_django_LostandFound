@@ -129,6 +129,8 @@ body{
   white-space:nowrap;
 
   cursor:pointer;
+
+  color: black;
 }
 
 
@@ -181,6 +183,8 @@ body{
   cursor:pointer;
 
   white-space:nowrap;
+
+  color: black;
 }
 
 
